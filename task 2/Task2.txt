@@ -1,0 +1,19 @@
+Window:
+
+ Each browser tab has its own top-level window object. Each <iframe> (and deprecated <frame>) element has its own window object too, nested within a parent window. Each of these windows gets its own separate global object.
+window.window always refers to window, but window.parent and window.top might refer to enclosing windows, giving access to other execution contexts. In addition to document and screen described below, window properties include
+
+1.setTimeout() and setInterval() binding event handlers to a timer
+2.location giving the current URL
+3.history with methods back() and forward() giving the tab's mutable history
+4.navigator describing the browser software
+
+Document:
+
+Each window object has a document object to be rendered. These objects get confused in part because HTML elements are added to the global object when assigned a unique id.
+
+1.window.holyCow or window["holyCow"]
+2.document.getElementById("holyCow")
+3.document.querySelector("#holyCow")
+4.document.body.firstChild
+5.document.body.children[0]
