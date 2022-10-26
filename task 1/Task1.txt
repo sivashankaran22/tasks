@@ -1,0 +1,76 @@
+# .Differences between HTTP/2 and HTTP/1.1:
+
+ Defination of HTTP:
+
+ Hypertext Transfer Protocol (HTTP) is an application protocol that is, currently, the foundation of data communication for the World Wide Web.
+ The first usable version of Introduction of HTTP was created in 1997. Because it went through several stages of development, this first version of HTTP was called HTTP/1.1. 
+ This version is still in use on the web. In 2015, a new version of HTTP called HTTP2 was created.
+
+1.HTTP2 is binary, instead of textual
+2.HTTP2 is fully multiplexed, instead of ordered and blocking
+3.HTP2 uses header compression to reduce overhead
+4.HTTP2 allows servers to “push” responses proactively into client caches
+
+1.Binary Protocol :
+ HTTP1.1 used to process text commands to complete request-response cycles.
+ HTTP/2 will use binary commands (in 1s and 0s) to execute the same tasks. 
+ This attribute eases complications with framing and simplifies implementation of commands that were confusingly intermixed due to commands containing text and optional spaces.
+ Texts will be convertered to Binary(1’s and 0's)
+
+2.Multiplexing :
+ HTTP/1.1 loads resources one after the other, so if one resource cannot be loaded, it blocks all the other resources behind it.
+ In contrast, HTTP/2 is able to use a single TCP connection to send multiple streams of data at once so that no one resource blocks any other resource.
+ HTTP/2 does this by splitting data into binary-code messages and numbering these messages so that the client knows which stream each binary message belongs to.
+
+
+3.Header compression:
+ Small files load more quickly than large ones. To speed up web performance, both HTTP/1.1 and HTTP/2 compress HTTP messages to make them smaller. 
+ However, HTTP/2 uses a more advanced compression method called HPACK that eliminates redundant information in HTTP header packets. This eliminates a few bytes from every HTTP packet.
+ Given the volume of HTTP packets involved in loading even a single webpage, those bytes add up quickly, resulting in faster loading.
+
+
+4.Server Push:
+ Typically, a server only serves content to a client device if the client asks for it. 
+ However, this approach is not always practical for modern webpages, which often involve several dozen separate resources that the client must request. S
+ erver Push capability allows the server to send additional cacheable information to the client that isn’t requested but is anticipated in future requests. 
+ For example, if the client requests for the resource X and it is understood that the resource Y is referenced with the requested file, the server can choose to push Y along with X instead of waiting for an appropriate client request.
+
+_______________________________________________________________________________!__________________________________________________________________________________________
+
+
+# . Objects in javascripts:
+   In JavaScript, an object is a standalone entity, with properties and type. Compare it with a car, for example. A car is an object, with properties. A car has a color, a design, weight, a material it is made of, etc.
+   The same way, JavaScript objects can have properties, which define their characteristics 
+ Creating Objects in JavaScript:
+ 1. By object literal
+ 2. By creating instance of Object directly
+   
+ -----> By object literal:
+  The syntax of creating object using object literal is given below:
+
+   object = {property1:value1,property2:value2......propertyn:valuen}
+
+Property and value is separated by colon(:).
+
+ -----> By creating instance of Object directly:
+The syntax of creating object directly is given below:
+
+    let objectname = newobject();
+
+Here, new keyword is used to create object.
+
+ ----->The syntax for accessing the property of an object is:
+
+         " objectName.property "
+
+or
+
+         " objectName[“property”] "
+
+Accessing ‘fname’ from example 1 using dot operator,
+
+        person.fname
+
+Accessing ‘name’ form example 2 using [],
+  
+        std["name"]
