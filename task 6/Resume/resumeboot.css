@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-width: 100%;
+    overflow-x: hidden;
+    background-color: #FDFDFD;
+}
+
+#img{
+    height: 150px;
+    width: 150px;
+    border-radius: 80px;
+    border-style: dotted;
+    border-color: #FABE28;
+}
+.hed{
+    height: 280px;
+    background-color: #565656;
+}
+.name{
+    font-size: 48px;
+    padding: 0.2rem 0.4rem;
+    background-color:#FABE28;
+    border-radius: 6px;
+    position: relative;
+    /* left: 790px; */
+    top: 40px;
+}
+#space{
+    background-color:#FDFDFD;
+    height: 45px;
+    width: 100%;
+    position: relative;
+    top: 165px;
+}
+#add{
+    display: flex;
+    justify-content: center;
+    padding-top: 0.8rem;
+    font-size: 18px;
+    background-color: #FDFDFD;
+}
+.std{
+ position: relative;
+ left: 60%;
+}
+.ran {
+    height: 10px;
+    width: 200px;
+    border-radius: 0px;
+    margin-top: 0.9rem;
+}
+.ran1{
+    background-color: #FABE28;
+    
+}
+.ran2{
+    height: 10px;
+    width: 200px;
+    border-radius: 0px;
+    margin-top: 0.5rem;  
+}
+.ma{
+    list-style: none;
+}
+.dim{
+   font-weight: 400;
+}
+.fit{
+    padding: 5em;
+    color: #565656;
+  
+}
+.logo{
+    height: 65px;
+    width: 65px;
+    background-color: #e4a914;
+    border-radius: 80px;
+    border-style: dotted;
+    border-color: #FABE28;
+}
+ 
+@media  screen and (max-width: 375px){
+    .name{
+       font-size:36px;
+    }
+}
